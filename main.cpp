@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+#include "Restaurant.h"
+
 void printMenu();
 
 int main() {
@@ -13,6 +15,7 @@ int main() {
 
 void printMenu() {
   int userChoice;
+  Restaurant data;
 
   cout << "OPTIONS:" << endl;
   cout << "0 - Enter restaurant name" << endl
@@ -26,6 +29,7 @@ void printMenu() {
 
   if (userChoice == 0) {
     cout << "ENTERING RESTAURANT NAME" << endl;
+    data.InsertName();
   }
   else if (userChoice == 1) {
     cout << "ENTERING RATING" << endl;
